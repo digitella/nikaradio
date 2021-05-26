@@ -64,8 +64,8 @@ Amplitude.init({
 	"songs": [
 		{
 			"name": "AFR",
-			"artist": "ancientfaith.com",
-			"album": "ancientfaith.com",
+			"artist": "AFR",
+			"album": "MUSIC",
 			"url": "https://ancientfaith.streamguys1.com/music",
 			"cover_art_url": "./album-art/afr.jpg"
 		},
@@ -93,14 +93,14 @@ Amplitude.init({
 		{
 			"name": "ВЕРА",
 			"artist": "Светлое радио онлайн",
-			"album": "radiovera.ru",
+			"album": "Vera",
 			"url": "http://radiovera.hostingradio.ru:8007/radiovera_128",
 			"cover_art_url": "./album-art/vera.jpg"
 		},
 		{
 			"name": "ГЛАГОЛЪ",
-			"artist": "radio-glagol.ru",
-			"album": "radio-glagol.ru",
+			"artist": "Глаголъ",
+			"album": "Глаголъ",
 			"url": "https://radioglagol.s02.radio-tochka.com:4145/radio",
 			"cover_art_url": "./album-art/glagol.jpg"
 		},

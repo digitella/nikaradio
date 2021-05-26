@@ -1,18 +1,17 @@
 /*
   1. Base
 */
-
 /*
   2. Components
 */
 div#amplitude-player {
   background: #FFFFFF;
-  box-shadow: 0 2px 12px 8px rgba(0, 0, 0, 0);
+  box-shadow: 0 2px 12px 8px rgba(0, 0, 0, 0.1);
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
-  max-width: 600px; }
+  max-width: 900px; }
 
 /* Small only */
 @media screen and (max-width: 39.9375em) {
@@ -29,10 +28,10 @@ div#amplitude-player {
 div#amplitude-left {
   padding: 0px;
   border-right: 1px solid #CFD8DC;
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column; }
-  div#amplitude-left img.album-art {
+  div#amplitude-left img {
     width: 100%; }
   div#amplitude-left div#player-left-bottom {
     flex: 1;
@@ -53,7 +52,7 @@ div#amplitude-left {
 div#amplitude-right {
   padding: 0px;
   overflow-y: scroll;
-  width: 100%;
+  width: 50%;
   display: flex;
   flex-direction: column; }
   div#amplitude-right div.song {
@@ -69,19 +68,19 @@ div#amplitude-right {
         margin-top: 15px; }
     div#amplitude-right div.song div.play-button-container {
       display: none;
-      background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/list-play-light.png") no-repeat;
+      background: url("../img/list-play-light.png") no-repeat;
       width: 22px;
       height: 22px;
       margin-top: 10px; }
     div#amplitude-right div.song div.play-button-container:hover {
-      background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/list-play-hover.png") no-repeat; }
+      background: url("../img/list-play-hover.png") no-repeat; }
     div#amplitude-right div.song.amplitude-active-song-container div.song-now-playing-icon-container img.now-playing {
       display: block; }
     div#amplitude-right div.song.amplitude-active-song-container:hover div.play-button-container {
       display: none; }
     div#amplitude-right div.song div.song-meta-data {
       float: left;
-width: 100%; }
+      width: calc( 100% - 110px ); }
       div#amplitude-right div.song div.song-meta-data span.song-title {
         color: #272726;
         font-size: 16px;
@@ -93,12 +92,12 @@ width: 100%; }
       div#amplitude-right div.song div.song-meta-data span.song-artist {
         color: #607D8B;
         font-size: 14px;
-        font-weight: normal;
+        font-weight: bold;
         text-transform: uppercase;
         display: block;
-        white-space: normal;
+        white-space: nowrap;
         overflow: hidden;
-        text-overflow: ""; }
+        text-overflow: ellipsis; }
     div#amplitude-right div.song img.bandcamp-grey {
       float: left;
       display: block;
@@ -125,7 +124,6 @@ width: 100%; }
   div#amplitude-player div#amplitude-right {
     width: 100%; } }
 div#progress-container {
-    display: none;
   width: 70%;
   float: left;
   position: relative;
@@ -332,18 +330,18 @@ div#control-container {
       height: 19px;
       cursor: pointer; }
       div#control-container div#repeat-container div#repeat.amplitude-repeat-off {
-        background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/repeat-off.svg"); }
+        background: url("../img/repeat-off.svg"); }
       div#control-container div#repeat-container div#repeat.amplitude-repeat-on {
-        background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/repeat-on.svg"); }
+        background: url("../img/repeat-on.svg"); }
     div#control-container div#repeat-container div#shuffle {
       width: 23px;
       height: 19px;
       cursor: pointer;
       float: right; }
       div#control-container div#repeat-container div#shuffle.amplitude-shuffle-off {
-        background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/shuffle-off.svg"); }
+        background: url("../img/shuffle-off.svg"); }
       div#control-container div#repeat-container div#shuffle.amplitude-shuffle-on {
-        background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/shuffle-on.svg"); }
+        background: url("../img/shuffle-on.svg"); }
   @media all and (-ms-high-contrast: none) {
     div#control-container *::-ms-backdrop, div#control-container div#control-container {
       margin-top: 40px;
@@ -359,7 +357,7 @@ div#control-container {
         width: 40px;
         height: 40px;
         cursor: pointer;
-        background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/prev.svg");
+        background: url("../img/prev.svg");
         background-repeat: no-repeat;
         float: left;
         margin-top: 10px;
@@ -371,15 +369,15 @@ div#control-container {
         cursor: pointer;
         float: left; }
         div#control-container div#central-control-container div#central-controls div#play-pause.amplitude-paused {
-          background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/play.svg"); }
+          background: url("../img/play.svg"); }
         div#control-container div#central-control-container div#central-controls div#play-pause.amplitude-playing {
-          background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/pause.svg"); }
+          background: url("../img/pause.svg"); }
       div#control-container div#central-control-container div#central-controls div#next {
         display: inline-block;
         width: 40px;
         height: 40px;
         cursor: pointer;
-        background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/next.svg");
+        background: url("../img/next.svg");
         background-repeat: no-repeat;
         float: left;
         margin-top: 10px;
@@ -394,19 +392,19 @@ div#control-container {
       cursor: pointer;
       margin: auto; }
       div#control-container div#volume-container div#shuffle-right.amplitude-shuffle-off {
-        background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/shuffle-off.svg"); }
+        background: url("../img/shuffle-off.svg"); }
       div#control-container div#volume-container div#shuffle-right.amplitude-shuffle-on {
-        background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/shuffle-on.svg"); }
+        background: url("../img/shuffle-on.svg"); }
   div#control-container div.amplitude-mute {
     cursor: pointer;
     width: 25px;
     height: 19px;
     float: left; }
     div#control-container div.amplitude-mute.amplitude-not-muted {
-      background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-players/volume.svg");
+      background: url("../img/volume.svg");
       background-repeat: no-repeat; }
     div#control-container div.amplitude-mute.amplitude-muted {
-      background: url("https://521dimensions.com/img/open-source/amplitudejs/blue-player/mute.svg");
+      background: url("../img/mute.svg");
       background-repeat: no-repeat; }
 
 div#control-container:after {
@@ -597,36 +595,13 @@ div#meta-container {
   3. Layout
 */
 body {
+  background-image: -webkit-linear-gradient(316deg, #3BD2AE 0%, #36BAC2 100%);
+  background-image: linear-gradient(-226deg, #3BD2AE 0%, #36BAC2 100%);
   height: 100vh;
   -webkit-font-smoothing: antialiased;
   font-family: "Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
   line-height: 1.5; }
-div.amplitude-wave-form{
-    margin-top: -14px;
-}
-      
- div.amplitude-wave-form svg{
-      stroke: #00a0ff;
-      height: 50px;
-      width: 100%;
-      stroke-width: .5px;
-}
- div.amplitude-wave-form svg g{
-   stroke: #00a0ff;
-   height: 50px;
-   width: 100%;
-}
- div.amplitude-wave-form svg g path{
-   stroke: #00a0ff;
-   height: 50px;
-   width: 100%;
-}
 
-div#large-visualization{
-    width: 100%;
-    background-color: black;
-    visibility: hidden;
-  }
 /*
   4. Pages
 */
